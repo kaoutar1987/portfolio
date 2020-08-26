@@ -26,11 +26,11 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 300; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 4rem; }
+    font-size: 6rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -44,7 +44,6 @@ a {
 
 header {
   position: fixed;
-  z-index: 2;
   width: 100%; }
 
 .text-secondary {
@@ -64,6 +63,37 @@ main {
     overflow: hidden; }
     main#accueil h1 {
       margin-top: 20vh; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url(/dist/img/portait_small.jpg);
+      width: 150px;
+      height: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#accueil h1 {
+    margin-top: 10vh; } }
 
 .menu-btn {
   position: absolute;
@@ -156,3 +186,30 @@ main {
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 40%;
+    border: #eece1a 5px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job2 {
+    grid-area: job2; }
+  .about-info .job3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }

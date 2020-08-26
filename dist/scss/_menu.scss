@@ -44,6 +44,7 @@
     width: 100%;
     opacity: 0.9;
     visibility: hidden;
+
     &.show{
         visibility: visible;
     }
@@ -63,7 +64,7 @@
         padding: 0;
         background: darken($primary-color,5);
         list-style: none;
-        transform: translate3d(0, -100%,0);
+        transform: translate3d(0,-100%,0);
         @include easeOut;
         &.show{
             // slide in from top 
@@ -96,7 +97,7 @@
             //slide in from right 
             transform: translate3d(0, 0, 0);
         }
-        &.current > a{
+        &.current > a {
             color: $secondary-color;
         }
 
@@ -111,13 +112,14 @@
         color: #FFF;
         text-decoration:none ;
         @include easeOut;
-        &:hover{
+
+        &:hover {
             color: $secondary-color;
         }
     }
 }
 //Delay each nav item slide by 0.1s
-@for $x from 1 through 4{
+@for $x from 1 through 5{
     .nav-item:nth-child(#{$x}){
         transition-delay: $x * 0.1s;
     }
