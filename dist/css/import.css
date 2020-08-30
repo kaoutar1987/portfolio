@@ -30,7 +30,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 3rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -44,6 +44,7 @@ a {
 
 header {
   position: fixed;
+  z-index: 2;
   width: 100%; }
 
 .text-secondary {
@@ -51,7 +52,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -62,7 +63,32 @@ main {
   main#accueil {
     overflow: hidden; }
     main#accueil h1 {
-      margin-top: 20vh; }
+      margin-top: 10vh; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: set-text-color(#eece1a); }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -91,9 +117,30 @@ main {
       width: 150px;
       height: 150px; } }
 
+.about-info {
+  grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+  grid-template-columns: 1fr; }
+
+.projects {
+  grid-template-columns: repeat(2, 1fr); }
+
 @media screen and (max-width: 500px) {
-  main#accueil h1 {
-    margin-top: 10vh; } }
+  main {
+    padding: 2rem; }
+    main #accueil h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: set-text-color(#444);
+  height: 60px; }
 
 .menu-btn {
   position: absolute;
@@ -213,3 +260,15 @@ main {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
