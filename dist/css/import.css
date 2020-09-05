@@ -114,8 +114,8 @@ main {
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url(/dist/img/portait_small.jpg);
-      width: 150px;
-      height: 150px; } }
+      width: 500px;
+      height: 500px; } }
 
 .about-info {
   grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
@@ -272,3 +272,73 @@ main {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.3rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: set-text-color(#eece1a); }
+      .boxes div:hover span {
+        color: set-text-color(#eece1a); }
+
+form {
+  display: flex;
+  flex-direction: column; }
+  @supports (display: grid) {
+    form {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 1em;
+      grid-template-areas: "name     email" "message  message" ".        button"; }
+      form .name {
+        grid-area: name; }
+      form .email {
+        grid-area: email; }
+      form .message {
+        grid-area: message; }
+        form .message textarea {
+          height: 10em; }
+      form .button {
+        grid-area: button; } }
+
+label {
+  display: block;
+  margin-top: 1em;
+  color: #eece1a; }
+
+input,
+textarea {
+  box-sizing: border-box;
+  display: block;
+  padding: .75em;
+  width: 100%;
+  min-width: 5em;
+  background: #414141;
+  border: 3px solid #fff;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-out; }
+  input:hover,
+  textarea:hover {
+    padding: 0.5rem 1.5rem;
+    background: #eece1a;
+    color: set-text-color(#eece1a); }
+
+.button {
+  display: inline-block;
+  width: auto;
+  min-width: auto;
+  margin-top: 1em;
+  margin-left: auto;
+  padding: .5em 1.5em;
+  color: #eece1a; }

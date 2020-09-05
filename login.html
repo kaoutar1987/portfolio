@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
 </head>
-<body id="bg-img">
+<body>
     
     <header>
         <div class="menu-btn">
@@ -22,12 +22,12 @@
 
             </div>
             <ul class="menu-nav">
-                <li class="nav-item current">
+                <li class="nav-item ">
                     <a href="index.html" class="nav-link">accueil     
                     </a>
                 </li>
                
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a href="about.html" class="nav-link">à propos
                     </a>
                 </li>
@@ -35,11 +35,11 @@
                     <a href="porfolio.html" class="nav-link">portfolio
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a href="contact.html" class="nav-link">contact
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
                     <a href="login.html" class="nav-link">login
                     </a>
                 </li>
@@ -47,30 +47,31 @@
         </nav>
 
     </header>
-    <main id="accueil">
+    <main id="cantact">
         <h1 class="lg-heading">
-            kaoutar <span class="text-secondary">habach</span>     
+            Login <span class="text-secondary">Form</span>     
         </h1>
         <h2 class="sm-heading">
-            web developer, programmer,& Entrepreneur
+            Endroit Administrateur   
         </h2>
-        <div class="icons">
-            <a href="#!">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="#!">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-        </div>
+        <form class="form" action="" method="POST">
+            <div class="form_item">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>  
+            </div>
+            <div class="form_item">
+                <label for="password">Mot de passe:</label>
+                <input type="password" name="password" id="password" required> 
+            </div>
+            <input class="button form-button" type="submit" value="SEND"></div>
+
+        
+              </form>
     </main >
     <footer id="main-footer">
         copyright &copy;2020 
+
+    </footer>
     <script src="dist/js/script.js"></script>
     
 

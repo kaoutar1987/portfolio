@@ -119,21 +119,21 @@ main{
     background: lighten($primary-color, 50);
     color: #333;
   }
+
+
+
 //widescreens
 @include mediaXL{
     .projects {
         grid-template-columns: repeat(4, 1fr);
-      }
+      } 
+   
     }
-    
-
-
 //Desktops & laptops
 @include mediaLg{
     .projects {
         grid-template-columns: repeat(3, 1fr);
-      }
-    
+      }    
 }
 //Tablets & small laptops
 @include mediaMd{
@@ -144,13 +144,13 @@ main{
             line-height: 1;
             margin-bottom: 1rem;
         }
-
     }
     ul.menu-nav, 
     div.menu-branding{
         float: none;
         width: 100%;
         min-height: 0;
+
 
         &.show{
             transform: translate3d(0,0,0);
@@ -167,8 +167,8 @@ main{
 
         .portrait{
             background: url(/dist/img/portait_small.jpg);
-            width:150px;
-            height:150px ;
+            width:500px;
+            height:500px ;
         }
     }
     
