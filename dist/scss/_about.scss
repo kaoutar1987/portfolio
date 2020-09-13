@@ -4,15 +4,18 @@
     grid-template-areas:'bioimage bio bio''job1 job2 job3';
     grid-template-columns:repeat(3,1fr) ;
     .bio-image{
+        width: 200px;
+        height: 200px;
         grid-area: bioimage;
         margin: auto;
-        border-radius: 40%;
-        border: $secondary-color 5px solid;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
     
     }
     .bio{
         grid-area: bio;
         font-size: 1.5rem;
+        font-weight: 300;
     }
     .job-1{
         grid-area: job1;
@@ -29,3 +32,20 @@
         border-bottom:$secondary-color 5px solid ;
     }   
 }
+// Smartphones
+@include mediaSm {
+  .about-info {
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+
+    grid-template-columns: 1fr;
+  } 
+
+  
+}
+ 
+

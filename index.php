@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>portfolio</title>
     <link rel="stylesheet" href="dist/css/import.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
 </head>
 <body id="bg-img">
-    
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -18,29 +18,30 @@
         </div>
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
+                <div class="portrait">
+                </div>
 
             </div>
             <ul class="menu-nav">
                 <li class="nav-item current">
-                    <a href="index.html" class="nav-link">accueil     
+                    <a href="index.php" class="nav-link">accueil     
                     </a>
                 </li>
                
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">à propos
+                    <a href="about.php" class="nav-link">à propos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="porfolio.html" class="nav-link">portfolio
+                    <a href="porfolio.php" class="nav-link">portfolio
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">contact
+                    <a href="contact.php" class="nav-link">contact
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link">login
+                    <a href="login.php" class="nav-link">login
                     </a>
                 </li>
             </ul>
@@ -55,16 +56,16 @@
             web developer, programmer,& Entrepreneur
         </h2>
         <div class="icons">
-            <a href="#!">
+            <a href="#">
                 <i class="fab fa-twitter fa-2x"></i>
             </a>
-            <a href="#!">
+            <a href="#">
                 <i class="fab fa-facebook fa-2x"></i>
             </a>
-            <a href="#!">
+            <a href="#">
                 <i class="fab fa-linkedin fa-2x"></i>
             </a>
-            <a href="#!">
+            <a href="#">
                 <i class="fab fa-github fa-2x"></i>
             </a>
         </div>

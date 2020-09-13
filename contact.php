@@ -23,24 +23,24 @@
             </div>
             <ul class="menu-nav">
                 <li class="nav-item ">
-                    <a href="index.html" class="nav-link">accueil     
+                    <a href="index.php" class="nav-link">accueil     
                     </a>
                 </li>
                
                 <li class="nav-item ">
-                    <a href="about.html" class="nav-link">à propos
+                    <a href="about.php" class="nav-link">à propos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="porfolio.html" class="nav-link">portfolio
+                    <a href="porfolio.php" class="nav-link">portfolio
                     </a>
                 </li>
                 <li class="nav-item current">
-                    <a href="contact.html" class="nav-link">contact
+                    <a href="contact.php" class="nav-link">contact
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link">login
+                    <a href="login.php" class="nav-link">login
                     </a>
                 </li>
             </ul>
@@ -81,7 +81,7 @@
               <textarea name="" id="message"></textarea>
             </label>
     
-            <input class="button form-button" type="submit" value="SEND">
+            <input class="button form-button" type="submit" value="Envoyer">
     
           </form>
        

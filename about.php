@@ -18,29 +18,31 @@
         </div>
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
+                <div class="portrait">
+
+                </div>
 
             </div>
             <ul class="menu-nav">
                 <li class="nav-item ">
-                    <a href="index.html" class="nav-link">accueil     
+                    <a href="index.php" class="nav-link">accueil     
                     </a>
                 </li>
                
                 <li class="nav-item current">
-                    <a href="about.html" class="nav-link">à propos
+                    <a href="about.php" class="nav-link">à propos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="porfolio.html" class="nav-link">portfolio
+                    <a href="porfolio.php" class="nav-link">portfolio
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">contact
+                    <a href="contact.php" class="nav-link">contact
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link">login
+                    <a href="login.php" class="nav-link">login
                     </a>
                 </li>
             </ul>
@@ -55,11 +57,11 @@
             laissez-moi vous dire quelques choses ...    
         </h2>
         <div class="about-info">
-            <img src="/dist/img/portait.jpg" alt="kaoutar habach"
+            <img src="dist/img/portait.jpg" alt="kaoutar habach"
             class="bio-image">
             <div class="bio">
                 <h3 class="text-secondary">BIO</h3>
-                <P>Je suis kaoutar Habach j’ai 32 ans  j’ai eu ma licence en geographie ,
+                <P>Je suis kaoutar Habach  j’ai eu ma licence en geographie ,
                   après mes études à la faculté chouaib dokali ; 
                   j’ai eu une expérience en commerce pendant 7ans au sein d’une franchise à casablanca ,
                   je suis d’origine de la province Sidi banour et maintenat
