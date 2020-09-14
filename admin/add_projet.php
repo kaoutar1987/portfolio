@@ -60,7 +60,7 @@ if (isset($_POST['add_projet'])) {
       
                     <div class="form-group">
                         <label for="projet_image"> Image Projet</label>
-                        <input type="file"  name="image">
+                        <input type="file"  name="image" accept="image/png, image/jpg">
                     </div>
 
                     

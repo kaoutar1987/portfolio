@@ -1,12 +1,8 @@
 <?php include "admin_header.php" ?>
+<?php require_once "db.php"?>
+ <div class="container-fluid">
 
-
-
-
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
+ <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
@@ -21,7 +17,7 @@
                     <tr>
                 
                         <th>Id</th>
-                        <th>First Name</th>                       
+                        <th>Name</th>                       
                         <th>Last Name</th>                       
                         <th>Email</th>
                         <th>Delete</th>
@@ -54,7 +50,7 @@
                                 $deleted_adm_id = $_GET['delete'];
 
                                 $delete_query = "DELETE FROM admin WHERE id = $deleted_admin_id";
-                                $deleted_admin_query = mysqli_query($connection,$delete_query);
+                                $deleted_admin_query = mysqli_query($conn,$delete_query);
 
                                 header('Location: admin.php');
                             }

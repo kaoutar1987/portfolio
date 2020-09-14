@@ -1,35 +1,39 @@
 
 <?php
-session_start();
+      session_start();
      require_once "db.php";
-     $message = "";
- 
-     if(isset($_SESSION['id'])!="") {
-        header("Location:admin.php");
     
-}
- 
-if (isset($_POST['login'])) {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
- 
-    if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-        $email_error = "Please Enter Valid Email ";
-    }
-    if(strlen($password) < 6) {
-        $password_error = "Password must be minimum of 6 characters";
-    }  
- 
-    $result = mysqli_query($conn, "SELECT * FROM admin WHERE email = '" . $email. "' &&  password = '" . md5($password). "'");
-    if ($row = mysqli_fetch_array($result)) {
-        $_SESSION['id'] = $row['id'];
-        $_SESSION['name'] = $row['name'];
-        $_SESSION['email'] = $row['email'];
-        header("Location:login.php");
-    } else {
-        $error_message = "Incorrect Email or Password";
-    }
-}
+     $message = ""
+     if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $email = htmlspecialchars(trim(strtolower($_POST['email'])));
+        $password = md5($_POST['password']);
+    
+        $sql  = "SELECT * FROM admin WHERE  email = '$email'  AND password = '$password'";
+        $result = mysqli_query($conn;$sql);
+        if(mysqli_num_rows($result) > 0)
+        {
+            while($row = mysqli_fetch_assoc($result))
+            {
+                $id = $row["id"];
+                $email =$row["email"];
+                session_start();
+                $_SESSION['id'] = $id;
+                $_SESSION['email'] = $email
+            }
+            header("Location:admin.php")
+        }
+        else
+        {
+            echo "Invalid email or password";
+        }
+
+     }
+    
+   
+   
+    
 ?>
 
 <!DOCTYPE html>
@@ -96,10 +100,10 @@ if (isset($_POST['login'])) {
             </div>
             <div class="form_item">
                 <label for="password">Mot de passe:</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" required minlenght ="6">
                 </label> 
             </div>
-            <input class="button form-button" type="submit" value="SEND"></div>
+            <input class="button form-button" type="submit" name="login" value="SEND"></div>
 
         
               </form>

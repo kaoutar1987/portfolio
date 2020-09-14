@@ -58,8 +58,6 @@
             Découvrez quelques-uns de mes projets ...  
         </h2>
         <div class="projects">
-            <div class="item">
-
             <?php
              $query = "SELECT * FROM projet";
              $load_projet_query = mysqli_query($conn,$query);
@@ -75,9 +73,10 @@
 
             
             ?>
+             <div class="item">
               <h1><?php echo $title_proj?></h1>
-              <a href="#!">
-                <img src="<?php echo $image_proj ?>" alt="<?php echo $image_proj?>">
+              <a href="#">
+                <img src="admin/<?php echo $image_proj ?>" alt="img">
               </a>
               <a href=<?php echo $url_proj?> class="btn-light">
                 <i class="fas fa-eye"></i> Project
@@ -85,16 +84,13 @@
               <a href="#" class="btn-dark">
                 <i class="fab fa-github"></i> Github
               </a>
-            </div>
-
-            
-          </div>
-
-         
+            </div> 
+          
 
           <?php 
         }
         ?>
+        </div>
     </main >
     <footer id="main-footer">
         copyright &copy;2020 

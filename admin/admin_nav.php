@@ -143,9 +143,6 @@
                     </li>
                     <li>
                         <a href="admin.php"><i class="fa fa-fw fa-bar-chart-o"></i> admin</a>
-                    </li>
-                    <li>
-                        <a href="cart.php"><i class="fa fa-fw fa-table"></i> Cart</a>
                     </li>  
                    
                 </ul>
