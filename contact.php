@@ -18,7 +18,7 @@
         </div>
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
+                <div style=" background:url(dist/img/portait.jpg);" class="portrait"></div>
 
             </div>
             <ul class="menu-nav">

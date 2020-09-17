@@ -1,8 +1,12 @@
+
+//colors
 $primary-color:#444;
-$secondary-color:#eece1a;
-$show-accueil-image:true;
-$accueil-image:url(dist/img/background.jpg);
-$background-opacity:0.9;
+$secondary-color:#f7e708;
+//background Image
+$show-accueil-image:true;//enable/disable
+//ac back img
+$accueil-image:url(../img/background.jpg);
+$background-opacity:0.6;
 
 // Set Text Color
 @function set-text-color($color) {
@@ -12,13 +16,12 @@ $background-opacity:0.9;
       @return #fff;
     }
   }
-  
-
+  // transition all
 @mixin easeOut {
     transition: all 0.5s ease-out;    
 }
-
-@mixin background {
+//back options
+ @mixin background {
     @if $show-accueil-image {
         &#bg-img{
             background:$accueil-image;
@@ -49,6 +52,7 @@ body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
+    
 
 }
  
@@ -61,12 +65,14 @@ h3{
 
     &.lg-heading{
         font-size: 3rem;
+        text-align: center;
     }
 
     &.sm-heading{
         margin-bottom: 2rem;
         padding:0.2rem 1rem ;
-        background:rgba(lighten($primary-color,2),0.5);
+        background:rgba(lighten($primary-color,5),0.8);
+        text-align: center;
     }
 }
 a{
@@ -88,16 +94,23 @@ main{
     
     .icons {
         margin-top:1rem;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+
         a{
             padding: 0.4rem;
+
             &:hover{
                 color: $secondary-color;
                 @include easeOut();
+
             }
         }
     }
     &#accueil{
         overflow: hidden;
+
         h1{
             margin-top:20vh ;
         }
@@ -109,6 +122,7 @@ main{
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
+
     &:hover {
       background: $secondary-color;
       color: set-text-color($secondary-color);

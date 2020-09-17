@@ -47,7 +47,7 @@
                                 echo "<tr>";
                                 echo "<td>$id_proj</td>";
                                 echo "<td>$title_proj</td>";
-                                echo "<td><img class= 'img-responsive' src='img/$image_proj' alt=''></td>";
+                                echo "<td><img class= 'img-responsive' src='$image_proj' alt=''></td>";
                                 echo "<td>$url_proj</td>";
                                 echo "<td> <a href='edit_projet.php?edit=$id_proj'>Edit</a></td>";
                                 echo "<td><a href='view_projet.php?delete=$id_proj'>Delete</a></td>";

@@ -17,8 +17,7 @@
                     <tr>
                 
                         <th>Id</th>
-                        <th>Name</th>                       
-                        <th>Last Name</th>                       
+                        <th>Name</th>                                             
                         <th>Email</th>
                         <th>Delete</th>
                     </tr>
@@ -34,9 +33,9 @@
                             }
 
                             while ($row = mysqli_fetch_array($load_admin_query)) {
-                                $adm_id = $row['id'];
-                                $adm_name = $row['name'];
-                                $adm_email = $row['email'];
+                                $adm_id = $row['id_admin'];
+                                $adm_name = $row['name_admin'];
+                                $adm_email = $row['email_admin'];
                                 
                                 echo "<tr>";
                                 echo "<td>$adm_id</td>";

@@ -3,33 +3,37 @@
       session_start();
      require_once "db.php";
     
-     $message = ""
+     $message = "";
      if(isset($_POST['login'])){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        // $email = $_POST['email'];
+        // $password = $_POST['password'];
         $email = htmlspecialchars(trim(strtolower($_POST['email'])));
-        $password = md5($_POST['password']);
+        $password = $_POST['password'];
     
-        $sql  = "SELECT * FROM admin WHERE  email = '$email'  AND password = '$password'";
-        $result = mysqli_query($conn;$sql);
+        $sql  = "SELECT * FROM admin WHERE  email_admin = '$email'  AND password_admin = '$password'";
+        $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0)
         {
             while($row = mysqli_fetch_assoc($result))
             {
-                $id = $row["id"];
-                $email =$row["email"];
+                $id = $row["id_admin"];
+                $email =$row["email_admin"];
                 session_start();
-                $_SESSION['id'] = $id;
-                $_SESSION['email'] = $email
+                $_SESSION['id_admin'] = $id;
+                $_SESSION['email_admin'] = $email;
             }
-            header("Location:admin.php")
+
+            header("Location:admin/admin.php");
+           
         }
         else
         {
             echo "Invalid email or password";
         }
-
+       
      }
+     
+
     
    
    
@@ -56,7 +60,7 @@
         </div>
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
+                <div style=" background:url(dist/img/portait.jpg);" class="portrait"></div>
 
             </div>
             <ul class="menu-nav">
@@ -85,7 +89,7 @@
         </nav>
 
     </header>
-    <main id="cantact">
+    <main id="login">
         <h1 class="lg-heading">
             Login <span class="text-secondary">Form</span>     
         </h1>
